@@ -1,0 +1,37 @@
+@use "variables" as var;
+
+@mixin telefono {
+  @media (min-width: var.$telefono) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: var.$tablet) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: var.$pc) {
+    @content;
+  }
+}
+
+@mixin pcXL {
+  @media (min-width: var.$pcXL) {
+    @content;
+  }
+}
+
+@mixin grid($columnas, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $gap;
+}
+
+@mixin resetear-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
